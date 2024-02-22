@@ -1,0 +1,20 @@
+{% extends 'inventory/base.html' %}
+
+{% block content %}
+<div id="contact">
+    <h2>Contact us </h2>
+
+    <form action="mailto:(your email)" method="post" enctype="text/plain">
+    Email:<br>
+    <input type="email" name="email" value="26kilif@student.isd.sn" required><br>
+    Location*(explain the specific adress):<br>
+    <input type="location"name="location"><br>
+    Information*also include the exact ip of the location.:<br>
+    <textarea name="information" rows="10" cols="30">
+    </textarea><br>
+    <input type="Submit" value="Submit">
+    </form>
+</div>
+{% endblock content %}
+
+

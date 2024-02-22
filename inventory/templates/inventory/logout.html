@@ -1,0 +1,30 @@
+{% extends 'inventory/base.html' %}
+
+{% block extra_head %}
+<style>
+    body {
+        background-image: url("{% url 'generate_background_image' %}");
+        background-size: cover;
+    }
+</style>
+{% endblock extra_head %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-11 col-md-4 mx-auto mt-5">
+            <h2>You Have Been Logged Out</h2>
+            
+            <p>Redirecting to login page in 5 seconds</p>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    <a href="{% url 'login' %}">If you are not being redirected click here</a>
+                </small>
+            </div>
+        </div>
+        <script>
+            setTimeout(function() {
+                window.location.href = "{% url 'login' %}";
+            }, 5000);
+        </script>
+    </div>
+{% endblock content %}
